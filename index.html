@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girasol Programable</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff; 
+            font-family: sans-serif;
+        }
+
+        .sunflower-container {
+            text-align: center;
+        }
+
+        .sunflower {
+            width: 300px; /* Ancho ajustable */
+            height: auto;
+            /* Esta línea es la parte 'programada' de la animación */
+            animation: rotateSunflower 20s linear infinite; 
+            transform-origin: center; /* Asegura que gire desde el centro */
+        }
+
+        /* Estilo de los Pétalos */
+        .petal {
+            fill: #ffeb3b; /* Amarillo brillante */
+            stroke: #fbc02d; /* Borde amarillo más oscuro */
+            stroke-width: 1;
+        }
+
+        /* Estilo del Centro */
+        .center {
+            fill: #795548; /* Marrón para el centro */
+            stroke: #5d4037; /* Borde marrón más oscuro */
+            stroke-width: 2;
+        }
+
+        /* Definición de la animación de rotación con CSS */
+        @keyframes rotateSunflower {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sunflower-container">
+        <h1>Mi Girasol Animado</h1>
+        
+        <!-- El código SVG del girasol simplificado -->
+        <svg class="sunflower" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Grupo de Pétalos (dibujados usando formas simples) -->
+            <g transform="translate(50,50)">
+                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(0)" />
+                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(30)" />
+                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(60)" />
+                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(90)" />
+                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(120)" />
+                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(150)" />
+                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(180)" />
+                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(210)" />
+                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(240)" />
+                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(270)" />
+                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(300)" />
+                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(330)" />
+            </g>
+            
+            <!-- Centro del girasol -->
+            <circle class="center" cx="50" cy="50" r="20" />
+        </svg>
+        
+        <p>Este girasol está programado con HTML, SVG y CSS.</p>
+    </div>
+
+</body>
+</html>
