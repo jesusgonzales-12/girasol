@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Girasol Programable</title>
+    <title>Feliz día amorcito</title>
     <style>
         body {
             display: flex;
@@ -12,18 +12,28 @@
             height: 100vh;
             margin: 0;
             background-color: #f0f8ff; 
-            font-family: sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .sunflower-container {
             text-align: center;
         }
 
+        h1 {
+            color: #d84315; /* Un tono rojizo/naranja romántico */
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
         .sunflower {
-            width: 300px; 
+            width: 250px; 
             height: auto;
+        }
+
+        /* La animación ahora solo gira la cabeza del girasol, no el tallo */
+        .flower-head {
             animation: rotateSunflower 20s linear infinite; 
-            transform-origin: center; 
+            transform-origin: 50px 50px; 
         }
 
         .petal {
@@ -38,38 +48,54 @@
             stroke-width: 2;
         }
 
+        /* Estilos del tallo y las hojas */
+        .stem {
+            stroke: #4caf50;
+            stroke-width: 6;
+            stroke-linecap: round;
+        }
+
+        .leaf {
+            fill: #4caf50;
+        }
+
         @keyframes rotateSunflower {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
 
     <div class="sunflower-container">
-        <h1>Mi Girasol Animado</h1>
+        <h1>Feliz día amorcito ❤️</h1>
         
-        <svg class="sunflower" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <g transform="translate(50,50)">
-                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(0)" />
-                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(30)" />
-                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(60)" />
-                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(90)" />
-                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(120)" />
-                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(150)" />
-                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(180)" />
-                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(210)" />
-                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(240)" />
-                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(270)" />
-                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(300)" />
-                <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(330)" />
-            </g>
+        <svg class="sunflower" viewBox="0 0 100 180" xmlns="http://www.w3.org/2000/svg">
+            <!-- Tallo -->
+            <line class="stem" x1="50" y1="50" x2="50" y2="170" />
             
-            <circle class="center" cx="50" cy="50" r="20" />
+            <!-- Hojas -->
+            <path class="leaf" d="M50,110 Q30,90 20,115 Q35,125 50,110" />
+            <path class="leaf" d="M50,130 Q70,110 80,135 Q65,145 50,130" />
+
+            <!-- Cabeza del Girasol animada -->
+            <g class="flower-head">
+                <g transform="translate(50,50)">
+                    <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(0)" />
+                    <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(30)" />
+                    <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(60)" />
+                    <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(90)" />
+                    <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(120)" />
+                    <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(150)" />
+                    <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(180)" />
+                    <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(210)" />
+                    <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(240)" />
+                    <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(270)" />
+                    <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(300)" />
+                    <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(330)" />
+                </g>
+                <circle class="center" cx="50" cy="50" r="20" />
+            </g>
         </svg>
     </div>
 
