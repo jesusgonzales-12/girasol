@@ -20,28 +20,24 @@
         }
 
         .sunflower {
-            width: 300px; /* Ancho ajustable */
+            width: 300px; 
             height: auto;
-            /* Esta línea es la parte 'programada' de la animación */
             animation: rotateSunflower 20s linear infinite; 
-            transform-origin: center; /* Asegura que gire desde el centro */
+            transform-origin: center; 
         }
 
-        /* Estilo de los Pétalos */
         .petal {
-            fill: #ffeb3b; /* Amarillo brillante */
-            stroke: #fbc02d; /* Borde amarillo más oscuro */
+            fill: #ffeb3b; 
+            stroke: #fbc02d; 
             stroke-width: 1;
         }
 
-        /* Estilo del Centro */
         .center {
-            fill: #795548; /* Marrón para el centro */
-            stroke: #5d4037; /* Borde marrón más oscuro */
+            fill: #795548; 
+            stroke: #5d4037; 
             stroke-width: 2;
         }
 
-        /* Definición de la animación de rotación con CSS */
         @keyframes rotateSunflower {
             from {
                 transform: rotate(0deg);
@@ -57,9 +53,7 @@
     <div class="sunflower-container">
         <h1>Mi Girasol Animado</h1>
         
-        <!-- El código SVG del girasol simplificado -->
         <svg class="sunflower" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <!-- Grupo de Pétalos (dibujados usando formas simples) -->
             <g transform="translate(50,50)">
                 <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(0)" />
                 <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(30)" />
@@ -75,11 +69,8 @@
                 <ellipse class="petal" cx="0" cy="-35" rx="10" ry="25" transform="rotate(330)" />
             </g>
             
-            <!-- Centro del girasol -->
             <circle class="center" cx="50" cy="50" r="20" />
         </svg>
-        
-        <p>Este girasol está programado con HTML, SVG y CSS.</p>
     </div>
 
 </body>
